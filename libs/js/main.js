@@ -76,7 +76,7 @@ console.log(vemFamilia(familia));
 
 //FUNÇÃO CAPTURA UMA POSIÇÃO DO ARRAY, TRATA E TRANSFORMA EM STR
 function escreveFamilia (obj){
-    var str = "Você se chama "+obj.nome +". Tem "+obj.idade+" de idade. E sua cor é "+obj.cor+"."
+    var str = "Ei "+obj.nome +". Você tem "+obj.idade+" de idade. E sua cor é "+obj.cor+"."
     return str;
 }
 
