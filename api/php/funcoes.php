@@ -86,22 +86,22 @@ function getMembroNome ($familia,$nome){
         }
 return $str;
 }
-
+echo "*guardando na string<br>";
 echo getMembroNome($familia,'Pai Zé');
 
 echo "<br><br>";
 
 function getMembrosNome ($familia,$nome){
-    $str = array();
+    $array = array();
     foreach ($familia as $oNome){
-            if ($oNome['nome'] == $nome ){
+            if ($oNome['nome'] !== $nome ){
                 $str = "<<--Oi ".($oNome['nome']). ". Sei que tem ".($oNome['idade']). " anos, e é ".($oNome['cor'])."!-->>";
-                array_push ($familia, $str);
+                array_push ($array, $str);
             }
         }
 return $str;
 }
-
+echo "*guardando no array<br>";
 echo getMembrosNome($familia,'Zé');
 
 ?>
