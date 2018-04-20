@@ -76,14 +76,32 @@ return $str;
 foreach ($familia as $membro){
     echo escreveFamilia($membro);
 }
-
-function getMembroNome ($familia, $nome){
-    foreach ($familia as $oNome =>nome){
-        $str => "--->>>Oi ".($oNome['nome']);
-    }
+echo "<br><br>";
+function getMembroNome ($familia,$nome){
+    //$str ="";
+    foreach ($familia as $oNome){
+            if ($oNome['nome'] == $nome ){
+                $str = "-->>Oi ".($oNome['nome']). ". Sei que tem ".($oNome['idade']). " anos, e é ".($oNome['cor'])."!<<--";
+            }
+        }
 return $str;
 }
 
-getMembroNome($familia, "Primo Zé");
+echo getMembroNome($familia,'Pai Zé');
+
+echo "<br><br>";
+
+function getMembrosNome ($familia,$nome){
+    $str = array();
+    foreach ($familia as $oNome){
+            if ($oNome['nome'] == $nome ){
+                $str = "<<--Oi ".($oNome['nome']). ". Sei que tem ".($oNome['idade']). " anos, e é ".($oNome['cor'])."!-->>";
+                array_push ($familia, $str);
+            }
+        }
+return $str;
+}
+
+echo getMembrosNome($familia,'Zé');
 
 ?>
